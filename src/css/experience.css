@@ -5,7 +5,8 @@
 }
 
 .experience-container{
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .experience-container-text{
@@ -41,12 +42,12 @@
      flex-wrap: wrap;
  }
 
- .experience-item {
-     min-width: 200px;
+ 
+.experience-foto{
+    border-radius: 32px;
+}
 
- }
-
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
      .experience-heading {
          max-width: 768px;
      }
@@ -57,23 +58,27 @@
 
      .experience-list {
          gap: 32px;
-        flex-wrap: nowrap;
-
-     }
- }
-
- @media screen and (min-width: 1440px) {
-     .experience-list {
          flex-wrap: wrap;
-         flex-direction: column;
-         justify-content: center;
-         max-width: 1312px;
-         max-height: 948px;
      }
- .experience-heading {
-    font-size: 48px;
+    .experience-list .experience-item:not(:last-child){
+        width: calc((100% - 32px)/2);
+     }
  }
-          .experience-item {
-              width: calc(100% - 64px)/3;
-          }
+ 
+ @media screen and (min-width: 1440px) {
+    .experience-container{
+        flex-direction: column;
+    }
+    
+    .experience-heading {
+        font-size: 48px;
+    }  
+     .experience-list{
+        flex-direction: column;
+
+     }
+    .experience-item{
+        flex: 1 1 calc((100% - 64px) / 3);
+        width: calc((100% - 64px)/3);
+    }  
  }
