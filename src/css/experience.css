@@ -46,6 +46,7 @@ flex-wrap: wrap;
 .experience-item {
     min-width: 200px;
 }
+ 
 
 @media screen and (min-width: 768px) {
     .experience-heading {
@@ -73,7 +74,8 @@ flex-wrap: wrap;
                         }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px){
+      
     .experience-list {
         flex-wrap: wrap;
         flex-direction: column;
@@ -87,5 +89,8 @@ flex-wrap: wrap;
 
     .experience-item {
         width: calc((100% - 64px)/3);
+        
     }
+                
+    
 }
