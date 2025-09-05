@@ -1,12 +1,15 @@
 .footer {
     background: #b58869;
-    padding: 24px 0;
+    padding: 24px 16px;
 }
 
 .footer-container {
     border: 1px solid rgba(11, 8, 3, 0.15);
     border-radius: 40px;
-    width: 288px;
+    /*width: 288px;*/
+    min-width: 288px;
+    max-width: 343px;
+
     height: 500px;
     padding: 32px 48px;
     background: #c29d84;
@@ -59,7 +62,7 @@ height: 32px;
 
 .div-bottom-text {
     margin: 32px auto 0;
-    width: 320px;
+    width: 288px;
 }
 
 .bottom-text {
@@ -73,7 +76,9 @@ height: 32px;
     .footer-container {
         border-radius: 40px;
             padding: 32px 48px;
-            width: 704px;
+            /*width: 704px;*/
+            min-width: 704px;
+                max-width: 704px;
             height: 156px;
     }
 
@@ -106,7 +111,9 @@ height: 32px;
 
     .footer-container {
        
-            width: 1312px;
+            /*width: 1312px;*/
+            min-width: 1312px;
+                max-width: 1312px;
             height: 100px;
             display: flex;
             flex-direction: row;
