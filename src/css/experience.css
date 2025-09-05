@@ -59,10 +59,9 @@
      .experience-list {
          gap: 32px;
          flex-wrap: wrap;
+           max-height: 1348px;
      }
-    .experience-list .experience-item:not(:last-child){
-        width: calc((100% - 32px)/2);
-     }
+         
  }
  
  @media screen and (min-width: 1440px) {
@@ -74,11 +73,15 @@
         font-size: 48px;
     }  
      .experience-list{
-        flex-direction: column;
-
+        flex-wrap: wrap;
+            flex-direction: column;
+            max-height: 948px;
+     
      }
-    .experience-item{
-        flex: 1 1 calc((100% - 64px) / 3);
-        width: calc((100% - 64px)/3);
-    }  
+         .experience-foto {
+             width: 416px;   }
+        
+    .experience-item {
+        width: 416px;   }
+                
  }
