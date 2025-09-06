@@ -6,28 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!modal || !openBtn || !closeBtn || !closeIcon) return;
 
-  function openModal() {
-    modal.style.display = 'flex';
-    setTimeout(() => modal.classList.add('active'), 10);
-  }
+  openBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+  });
 
-  function closeModal() {
-    modal.classList.remove('active');
-    modal.addEventListener('transitionend', handleTransitionEnd);
-  }
+  const closeModal = () => modal.classList.remove('active');
 
-  function handleTransitionEnd(e) {
-    if (e.propertyName === 'opacity') {
-      modal.style.display = 'none';
-      modal.removeEventListener('transitionend', handleTransitionEnd);
-    }
-  }
-
-  openBtn.addEventListener('click', openModal);
   closeBtn.addEventListener('click', closeModal);
   closeIcon.addEventListener('click', closeModal);
 
   modal.addEventListener('click', e => {
     if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
   });
 });
